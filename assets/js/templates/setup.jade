@@ -1,0 +1,4 @@
+ul.pages
+  - each program in programs
+    li(id="#{program._id}")= program.name
+  li!= form

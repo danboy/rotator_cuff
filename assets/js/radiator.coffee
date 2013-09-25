@@ -1,0 +1,3 @@
+window.Radiator = 
+  Models: {}
+  Views: {}

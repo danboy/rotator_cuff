@@ -1,0 +1,4 @@
+ul(class="errors")
+  - each error in errors
+    li(class="error") #{error.error.field[0]}: #{error.error.message}
+  
