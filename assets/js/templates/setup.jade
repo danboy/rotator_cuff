@@ -1,4 +1,25 @@
-ul.pages
-  - each program in programs
-    li(id="#{program._id}")= program.name
-  li!= form
+.pure-u-1
+  table.program-list.pure-table.pure-table-bordered.pure-table-striped
+    thead
+      tr
+        th Name
+        th Url
+        th Delay
+        th Notes
+        th Actions
+    tbody
+      - each program in programs
+        tr(id="#{program.id}")
+          td= program.name
+          td
+            a(href="#{program.url}") #{program.url.substring(7, 100)} 
+          td #{((program.delay/1000)/60).toString().substring(0,4)} minutes
+          td= program.note
+          td
+            menu(data-programId="#{program.id}")
+              li.edit edit
+              li.destroy delete
+.pure-u-1!= form
+.pure-u-3-4
+.pure-u-1-4
+  button(value="show", class="pure-button pure-button-primary pure-input-1 show") Show em.

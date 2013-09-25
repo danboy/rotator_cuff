@@ -1,9 +1,12 @@
+h1 Add a site
 form(class="pure-form pure-form-aligned", id="program")
   fieldset(class="pure-group")
       input(name="name", value="#{ name || '' }", type="text", placeholder="name", class="pure-input-1")
       input(name="url", value="#{ url || '' }", type="text", placeholder="http://", class="pure-input-1")
-      div(class="pure-u-1-4")
+      div(class="pure-u-1-5")
         input(name="delay", value="#{ delay || '' }", type="text", placeholder="6000", class="pure-input-1")
-      div(class="pure-u-3-4")
-        input(name="note", value="#{ note || '' }", type="text", placeholder="lorem ipsum", class="pure-input-1")
+      div(class="pure-u-1-5")
+        input(name="order", value="#{ order || '' }", type="text", placeholder="sort order", class="pure-input-1")
+      div(class="pure-u-3-5")
+        input(name="note", value="#{ note || '' }", type="text", placeholder="notes", class="pure-input-1")
       button(type="submit", value="new", class="pure-button pure-button-primary pure-input-1") Add a site
